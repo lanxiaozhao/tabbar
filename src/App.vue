@@ -1,32 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="tab-bar">
+      <div class="tab-bar-item">首页</div>
+      <div class="tab-bar-item">首页</div>
+      <div class="tab-bar-item">首页</div>
+      <div class="tab-bar-item">首页</div>
     </div>
-    <router-view/>
   </div>
 </template>
-
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+export default {
+  name: 'App',
+  components: {
+    
   }
 }
+</script>
+<style lang="less">
+  @import "./assets/less/base.less";
+  #tab-bar {
+    display: flex;
+    height: 49px;
+    background-color: #f6f6f6;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 -1px 1px rgba(136, 136, 136, 0.2);
+    .tab-bar-item {
+      flex: 1;
+      text-align: center;
+    }
+  }
 </style>

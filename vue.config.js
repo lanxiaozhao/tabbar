@@ -8,6 +8,6 @@ module.exports = {
     config.resolve.alias
       .set('assets', resolve('src/assets'))
       .set('components', resolve('src/components'))
-      
+      .set('views', resolve('src/views'))    
   }
 }
